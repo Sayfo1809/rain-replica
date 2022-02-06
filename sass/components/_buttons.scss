@@ -1,0 +1,25 @@
+.btn {
+  background-color: transparent;
+  border: 1px solid var(--blue);
+  border-radius: 1.6rem;
+  padding: 0.1rem 5.5rem;
+
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--blue);
+
+  &:hover {
+    background-color: var(--active);
+  }
+
+  &--white {
+    background-color: var(--white);
+    color: var(--primary);
+  }
+
+  &--special {
+    border-color: var(--white);
+    color: var(--white);
+    align-self: flex-start;
+  }
+}

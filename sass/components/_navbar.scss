@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+
+  &__links,
+  &__items,
+  &__user {
+    display: flex;
+  }
+
+  &__items,
+  &__user {
+    list-style-type: none;
+  }
+
+  &__item,
+  &__user--item {
+    margin-right: 2rem;
+  }
+
+  &__link,
+  &__user--link {
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 700;
+  }
+}

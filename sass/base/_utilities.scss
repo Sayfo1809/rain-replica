@@ -1,0 +1,25 @@
+.container {
+  width: 70vw;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  // justify-content: space-between;
+}
+
+.col-1_2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.col-1_3 {
+  width: calc((100% - 2 * 1.6rem) / 3);
+  height: 100%;
+}
+
+.card__flip-toggle {
+  transform: translateY(180deg);
+}

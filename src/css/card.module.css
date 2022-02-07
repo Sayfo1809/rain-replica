@@ -1,0 +1,166 @@
+.card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.16);
+}
+
+.card__special .card__front {
+  background-color: var(--blue);
+}
+
+.card__special .card__front::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 15rem;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  background-color: var(--red);
+}
+
+.card__special .card__front::after {
+  content: "winter promo";
+  position: absolute;
+  top: 2.8rem;
+  left: 2.5rem;
+  width: 5rem;
+  transform: rotate(-45deg);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card__special .card__pricing {
+  margin-left: 0.5rem;
+  color: var(--white);
+  text-align: left;
+}
+
+.card__special .card__price--now {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.card__special .card__price {
+  text-decoration: line-through;
+  text-decoration-color: var(--red);
+}
+
+.card__special .card__price--terms {
+  color: var(--white);
+}
+
+.card__special .card__header {
+  color: var(--white);
+  margin-top: 2rem;
+  width: 65%;
+}
+
+.card__special .card__img {
+  max-width: 100%;
+  height: 18rem;
+}
+
+.card__special .btn {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.card__special .card__content {
+  flex-direction: row;
+}
+
+.card__flip {
+  position: relative;
+  transition: transform 0.6s;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  transform-style: preserve-3d;
+  transform: translateY(0);
+}
+
+.card:hover .card__flip {
+  transform: rotateY(180deg);
+}
+
+.card__front, .card__back {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  background-color: var(--white);
+  backface-visibility: hidden;
+}
+
+.card__front {
+  background-color: var(--white);
+}
+
+.card__back {
+  transform: rotateY(180deg);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  color: var(--blue);
+  text-align: center;
+}
+
+.card__pricing {
+  color: var(--blue);
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.card__price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.card__price span {
+  position: absolute;
+  top: -0.4rem;
+  left: 6.9rem;
+  font-size: 1.4rem;
+}
+
+.card__price--terms {
+  font-size: 1.4rem;
+  color: var(--dark-grey);
+}
+
+.card__img {
+  max-width: 100%;
+  height: 18rem;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.card .btn {
+  position: relative;
+  align-self: flex-end;
+  margin-right: 2rem;
+}

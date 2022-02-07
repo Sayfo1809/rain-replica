@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.navbar__links, .navbar__items, .navbar__user {
+  display: flex;
+}
+
+.navbar__items, .navbar__user {
+  list-style-type: none;
+}
+
+.navbar__item, .navbar__user--item {
+  margin-right: 2rem;
+}
+
+.navbar__link, .navbar__user--link {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 700;
+}

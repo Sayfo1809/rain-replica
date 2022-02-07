@@ -3,6 +3,8 @@
   border: 1px solid var(--blue);
   border-radius: 1.6rem;
   padding: 0.1rem 5.5rem;
+  align-self: flex-end;
+  margin-right: 2rem;
 
   text-decoration: none;
   cursor: pointer;
@@ -20,6 +22,6 @@
   &--special {
     border-color: var(--white);
     color: var(--white);
-    align-self: flex-start;
+    margin-left: 2rem;
   }
 }

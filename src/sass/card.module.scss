@@ -99,6 +99,7 @@
     align-items: center;
     position: absolute;
     background-color: var(--white);
+    backface-visibility: hidden;
   }
 
   &__front {

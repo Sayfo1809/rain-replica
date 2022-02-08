@@ -8,6 +8,7 @@ const CardSpecialFront = ({
   imageAltText,
   cardPrice,
   cardDuration,
+  onClick,
 }) => {
   return (
     <div className={styles["card__front"]}>
@@ -23,7 +24,7 @@ const CardSpecialFront = ({
           <p className={styles["card__price--terms"]}>{cardDuration}</p>
         </div>
       </div>
-      <ButtonSpecial />
+      <ButtonSpecial onClick={onClick} />
     </div>
   );
 };

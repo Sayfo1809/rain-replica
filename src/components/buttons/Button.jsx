@@ -2,11 +2,11 @@ import React from "react";
 
 import styles from "../../css/buttons.module.css";
 
-const Button = ({ buttonText }) => {
+const Button = ({ buttonText, onClick }) => {
   return (
-    <a href="#" className={styles.btn}>
+    <button className={styles.btn} onClick={onClick}>
       {buttonText}
-    </a>
+    </button>
   );
 };
 

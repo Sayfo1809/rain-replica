@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import CardFront from "./CardFront";
 import CardIllustrativeFront from "./CardIllustrativeFront";
@@ -21,11 +21,25 @@ const Card = ({
   imageAltText,
   buttonText,
 }) => {
+  const [flipCard, setFliipCard] = useState(true);
+  const [cardFlipper, setCardFlipper] = useState("");
+
+  const cardFlipHandler = () => {
+    setFliipCard((prevState) => !prevState);
+
+    console.log(flipCard);
+
+    if (flipCard) {
+      setCardFlipper(`${styles["card__flip"]}`);
+    } else if (!flipCard) setCardFlipper("");
+    // console.log("button clicked", flipCard, cardFlipper);
+  };
+
   return (
     <React.Fragment>
       {cardType === "standard" ? (
         <div className={`${styles.card} card`}>
-          <div className={styles["card__flip"]}>
+          <div className={cardFlipper}>
             <CardFront
               styles={styles}
               cardHeader={cardHeader}
@@ -34,13 +48,14 @@ const Card = ({
               cardImage={cardImage}
               imageAltText={imageAltText}
               buttonText={buttonText}
+              onClick={cardFlipHandler}
             />
-            <CardBack styles={styles} />
+            <CardBack styles={styles} onClick={cardFlipHandler} />
           </div>
         </div>
       ) : cardType === "special" ? (
         <div className={`${styles.card} card ${styles["card__special"]}`}>
-          <div className={styles["card__flip"]}>
+          <div className={cardFlipper}>
             <CardSpecialFront
               styles={styles}
               cardHeader={cardHeader}
@@ -49,21 +64,23 @@ const Card = ({
               cardImage={cardImage}
               imageAltText={imageAltText}
               buttonText={buttonText}
+              onClick={cardFlipHandler}
             />
-            <CardBack styles={styles} />
+            <CardBack styles={styles} onClick={cardFlipHandler} />
           </div>
         </div>
       ) : cardType === "illustrative" ? (
         <div className={`${styles.card} card`}>
-          <div className={styles["card__flip"]}>
+          <div className={cardFlipper}>
             <CardIllustrativeFront
               styles={styles}
               cardHeader={cardHeader}
               cardImage={cardImage}
               imageAltText={imageAltText}
               buttonText={buttonText}
+              onClick={cardFlipHandler}
             />
-            <CardBack styles={styles} />
+            <CardBack styles={styles} onClick={cardFlipHandler} />
           </div>
         </div>
       ) : null}

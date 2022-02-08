@@ -2,11 +2,14 @@ import React from "react";
 
 import styles from "../../css/buttons.module.css";
 
-const ButtonSpecial = () => {
+const ButtonSpecial = ({ onClick }) => {
   return (
-    <a href="#" className={`${styles.btn} ${styles["btn--special"]}`}>
+    <button
+      className={`${styles.btn} ${styles["btn--special"]}`}
+      onClick={onClick}
+    >
       view
-    </a>
+    </button>
   );
 };
 

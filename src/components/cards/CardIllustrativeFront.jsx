@@ -7,6 +7,7 @@ const CardIllustrativeFront = ({
   cardImage,
   imageAltText,
   buttonText,
+  onClick,
 }) => {
   return (
     <div className={styles["card__front"]}>
@@ -18,7 +19,7 @@ const CardIllustrativeFront = ({
           alt={imageAltText}
         />
       </div>
-      <Button buttonText={buttonText} />
+      <Button buttonText={buttonText} onClick={onClick} />
     </div>
   );
 };

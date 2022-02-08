@@ -9,6 +9,7 @@ const CardFront = ({
   cardPrice,
   cardDuration,
   buttonText,
+  onClick,
 }) => {
   return (
     <div className={styles["card__front"]}>
@@ -27,7 +28,7 @@ const CardFront = ({
           <p className={styles["card__price--terms"]}>{cardDuration}</p>
         </div>
       </div>
-      <Button buttonText={buttonText} />
+      <Button buttonText={buttonText} onClick={onClick} />
     </div>
   );
 };
